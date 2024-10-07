@@ -1,5 +1,4 @@
-import home1 from "../../../public/images/home1.jpg"
-// import Image from "next/image"
+
 import Slider from "./Slider";
 
 const images = [
