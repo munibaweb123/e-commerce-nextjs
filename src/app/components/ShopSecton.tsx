@@ -1,41 +1,40 @@
 
-
 import Image from 'next/image';
 
 export interface Product {
-    id: number;
-    name: string;
-    price: number;
-    description: string;
-    imageUrl: string;
-  }
-  
-  export const products: Product[] = [
-    {
-      id: 1,
-      name: 'Product 1',
-      price: 29.99,
-      description: 'This is a description of Product 1.',
-      imageUrl: "/images/shop/shop1.jpg",
-    },
-    {
-      id: 2,
-      name: 'Product 2',
-      price: 49.99,
-      description: 'This is a description of Product 2.',
-      imageUrl: '/images/shop/shop2.jpg',
-    },
-    {
-      id: 3,
-      name: 'Product 3',
-      price: 19.99,
-      description: 'This is a description of Product 3.',
-      imageUrl: '/images/shop/shop3.jpg',
-    },
-    // Add more products as needed
-  ];
+  id: number;
+  name: string;
+  price: number;
+  description: string;
+  imageUrl: string;
+}
 
-const Shop:React.FC<Product> = () => {
+export const products: Product[] = [
+  {
+    id: 1,
+    name: 'Product 1',
+    price: 29.99,
+    description: 'This is a description of Product 1.',
+    imageUrl: '/images/shop/shop1.jpg',
+  },
+  {
+    id: 2,
+    name: 'Product 2',
+    price: 49.99,
+    description: 'This is a description of Product 2.',
+    imageUrl: '/images/shop/shop2.jpg',
+  },
+  {
+    id: 3,
+    name: 'Product 3',
+    price: 19.99,
+    description: 'This is a description of Product 3.',
+    imageUrl: '/images/shop/shop3.jpg',
+  },
+  // Add more products as needed
+];
+
+const Shop: React.FC = () => {
   return (
     <div className="max-w-7xl mx-auto p-4">
       <h1 className="text-3xl font-bold mb-6">Shop</h1>
@@ -45,7 +44,13 @@ const Shop:React.FC<Product> = () => {
             key={product.id}
             className="border rounded-lg shadow-lg overflow-hidden"
           >
-            <Image src={product.imageUrl} alt={product.name}  width={500} height={500}/>
+            <Image 
+              src={product.imageUrl} 
+              alt={product.name} 
+              width={500} 
+              height={500} 
+              className="object-cover" // Optional for better image scaling
+            />
             <div className="p-4">
               <h2 className="text-xl font-semibold">{product.name}</h2>
               <p className="text-gray-700">{product.description}</p>
