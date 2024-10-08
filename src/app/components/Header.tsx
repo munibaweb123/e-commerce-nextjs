@@ -5,6 +5,7 @@ import Link from "next/link";
 import search from "../../../public/images/search_icon.svg";
 import profile from "../../../public/images/person_account_icon.svg";
 import shop from "../../../public/images/shop_icon.svg";
+import Navbar from './Navbar';
 
 export default function Header() {
   const [showAuthOptions, setShowAuthOptions] = useState(false);
@@ -21,22 +22,7 @@ export default function Header() {
       </div>
       
       {/* Navigation */}
-      <nav>
-        <ul className="flex gap-x-4 pl-10 pr-10">
-          <li className="text-xl text-gray-800 hover:text-black hover:font-bold">
-            <Link href="/">Home</Link>
-          </li>
-          <li className="text-xl text-gray-800 hover:text-black hover:font-bold">
-            <Link href="/shop">Shop</Link>
-          </li>
-          <li className="text-xl text-gray-800 hover:text-black hover:font-bold">
-            <Link href="/">Product</Link>
-          </li>
-          <li className="text-xl text-gray-800 hover:text-black hover:font-bold">
-            <Link href="/">Contact Us</Link>
-          </li>
-        </ul>
-      </nav>
+    <Navbar/>
       
       {/* Profile and Auth Options */}
       <div className="relative flex gap-x-2">

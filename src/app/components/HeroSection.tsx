@@ -14,13 +14,13 @@ const images = [
 ]
 export default function HeroSection(){
     return (
-    <div className="flex-1 justify-normal h-auto">
+    <div className="flex-1 justify-evenly h-auto">
       <div>
       <Slider images={images} />
       </div>
-      <div className="flex gap-x-4 ">
-        <div className="flex justify-center items-center pt-10 pb-10">
-          <h2 className="text-6xl font-bold">Simply Unique/ Simply Better.</h2>
+      <div className="grid grid-cols-1 md:grid-cols-2 ">
+        <div className=" pt-10 pb-10">
+          <h2 className="text-4xl md:text-6xl font-bold ">Simply Unique/ Simply Better.</h2>
         </div>
 
         <div className="text-2xl flex justify-center items-center">
