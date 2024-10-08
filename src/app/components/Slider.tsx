@@ -5,6 +5,8 @@ import leftarrow from "../../../public/images/left-arrow.png"
 import rightarrow from "../../../public/images/right-arrow.png"
 import React, { useState } from 'react';
 
+
+
 interface ImageSliderProps {
   images: string[];
 }
@@ -22,7 +24,7 @@ const Slider: React.FC<ImageSliderProps> = ({ images }) => {
 
   return (
     <div className="relative w-full min-w-0 mx-auto">
-      <Image src={images[currentIndex]} alt={`Slide ${currentIndex}`} className="w-full min-h-screen rounded-lg" />
+      <Image src={images[currentIndex]} alt={`Slide ${currentIndex}`} className="w-full max-h-auto rounded-lg" width={1000} height={600} />
       <button onClick={prevSlide} className="absolute left-0 top-1/2 transform -translate-y-1/2 bg-transparent p-2 rounded-full shadow-md">
         <Image src={leftarrow} alt="left arrow" height={100} width={100}/>
       </button>
