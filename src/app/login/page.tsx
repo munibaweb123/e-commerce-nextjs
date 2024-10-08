@@ -21,7 +21,7 @@ const Login = () => {
         <div className="flex items-center justify-center h-screen">
       <form onSubmit={handleLogin} className="bg-white p-6 rounded shadow-md">
         <h2 className="mb-4 text-lg font-bold">Login</h2>
-        <h3 className="mb-4 text-md " >Don't have an account? <Link href="/signup" className='text-green-500 font-semibold'>sign up</Link></h3>
+        <h3 className="mb-4 text-md " >Don&lsquo;t have an account? <Link href="/signup" className='text-green-500 font-semibold'>sign up</Link></h3>
         <div className="mb-4">
           <label className="block mb-1">Email</label>
           <input
