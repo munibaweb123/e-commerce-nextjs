@@ -9,7 +9,7 @@ const Navbar: React.FC = () => {
   };
 
   return (
-    <nav className="text-gray-900">
+    <nav className="text-gray-900 ">
       <div className="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
         <div className="relative flex items-center justify-between h-16">
           <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
@@ -69,7 +69,7 @@ const Navbar: React.FC = () => {
       </div>
 
       <div className={`${isOpen ? 'block' : 'hidden'} sm:hidden`} id="mobile-menu">
-        <div className="px-2 pt-2 pb-3 space-y-1">
+        <div className="px-2 pt-2 pb-3 space-y-1 ">
           <Link href="/" className="text-gray-700 hover:text-gray-900 hover:font-bold block px-3 py-2 rounded-md text-base font-medium">Home</Link>
           <Link href="/shop" className="text-gray-700  hover:text-gray-900 hover:font-bold block px-3 py-2 rounded-md text-base font-medium">Shop</Link>
           <Link href="/product" className="text-gray-700  hover:text-gray-900 hover:font-bold block px-3 py-2 rounded-md text-base font-medium">Product</Link>

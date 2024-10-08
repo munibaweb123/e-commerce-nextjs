@@ -12,24 +12,31 @@ export interface Product {
 export const products: Product[] = [
   {
     id: 1,
-    name: 'Product 1',
+    name: 'Living Room',
     price: 29.99,
-    description: 'This is a description of Product 1.',
+    description: 'Sofa for Living Room.',
     imageUrl: '/images/shop/shop1.jpg',
   },
   {
     id: 2,
-    name: 'Product 2',
+    name: 'Living Room',
     price: 49.99,
-    description: 'This is a description of Product 2.',
+    description:'Table For Living Room.',
     imageUrl: '/images/shop/shop2.jpg',
   },
   {
     id: 3,
-    name: 'Product 3',
+    name: 'Living Room',
     price: 19.99,
-    description: 'This is a description of Product 3.',
+    description: 'Plant Decoration for Living Room',
     imageUrl: '/images/shop/shop3.jpg',
+  },
+  {
+    id: 3,
+    name: 'Living Room',
+    price: 199.99,
+    description: 'LCD TV for Living Room',
+    imageUrl: '/images/shop/shop4.jpg',
   },
   // Add more products as needed
 ];
@@ -38,7 +45,7 @@ const Shop: React.FC = () => {
   return (
     <div className="max-w-7xl mx-auto p-4">
       <h1 className="text-3xl font-bold mb-6">Shop</h1>
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 ">
         {products.map((product: Product) => (
           <div
             key={product.id}
@@ -51,7 +58,7 @@ const Shop: React.FC = () => {
               height={500} 
               className="object-cover" // Optional for better image scaling
             />
-            <div className="p-4">
+            <div className="p-4 bg-blue-50">
               <h2 className="text-xl font-semibold">{product.name}</h2>
               <p className="text-gray-700">{product.description}</p>
               <p className="text-lg font-bold">${product.price.toFixed(2)}</p>

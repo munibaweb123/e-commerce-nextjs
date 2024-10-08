@@ -25,11 +25,11 @@ const Slider: React.FC<ImageSliderProps> = ({ images }) => {
   return (
     <div className="relative w-full min-w-0 mx-auto">
       <Image src={images[currentIndex]} alt={`Slide ${currentIndex}`} className="w-full max-h-auto rounded-lg" width={1000} height={600} />
-      <button onClick={prevSlide} className="absolute left-0 top-1/2 transform -translate-y-1/2 bg-transparent p-2 rounded-full shadow-md">
-        <Image src={leftarrow} alt="left arrow" height={100} width={100}/>
+      <button onClick={prevSlide} className="absolute left-0 top-1/2 transform -translate-y-1/2 bg-white bg-opacity-50 p-2 rounded-full shadow-md">
+        <Image src={leftarrow} alt="left arrow" height={50} width={50}/>
       </button>
-      <button onClick={nextSlide} className="absolute right-0 top-1/2 transform -translate-y-1/2 bg-transparent p-2 rounded-full shadow-md">
-        <Image src={rightarrow} alt="right arrow" height={100} width={100}/>
+      <button onClick={nextSlide} className="absolute right-0 top-1/2 transform -translate-y-1/2 bg-white bg-opacity-50 p-2 rounded-full shadow-md">
+        <Image src={rightarrow} alt="right arrow" height={50} width={50}/>
       </button>
       <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2">
         {images.map((_, index) => (

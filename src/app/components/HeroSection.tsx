@@ -28,7 +28,7 @@ export default function HeroSection(){
         </div>
 
       </div>
-      <div className="flex items-center justify-center">
+      <div className="flex items-center justify-center bg-blue-50">
         <Image src={coupon} alt="coupon icon" width={50} height={50}/>
         <h3 className="pl-10 text-2xl font-bold">30% off storewide — Limited time! <span className="text-blue-600">Shop Now.</span></h3>
       <Image src={arrow} alt="right arrow icon" width={60} height={40}/>
