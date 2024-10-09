@@ -44,7 +44,7 @@ export const products: Product[] = [
 const Shop: React.FC = () => {
   return (
     <section id='shop' className="max-w-7xl mx-auto p-4">
-      <h1 className="text-3xl font-bold mb-6">Shop</h1>
+      <h1 className="text-4xl text-center pt-10 pb-10 font-bold mb-6">Shop</h1>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 ">
         {products.map((product: Product) => (
           <div
