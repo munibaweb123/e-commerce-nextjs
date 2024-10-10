@@ -1,5 +1,6 @@
 
 import Image from 'next/image';
+import arrow from "../../../public/images/arrow.png"
 
 export interface Product {
   id: number;
@@ -32,11 +33,25 @@ export const products: Product[] = [
     imageUrl: '/images/shop/shop3.jpg',
   },
   {
-    id: 3,
+    id: 4,
     name: 'Living Room',
     price: 199.99,
     description: 'LCD TV for Living Room',
     imageUrl: '/images/shop/shop4.jpg',
+  },
+  {
+    id: 5,
+    name: 'Home Garden',
+    price: 149.99,
+    description: 'Sofa set for Home Garden',
+    imageUrl: '/images/shop/shop5.jpg',
+  },
+  {
+    id: 6,
+    name: 'Dining Room',
+    price: 199.99,
+    description: 'Book shelf for Dining Room',
+    imageUrl: '/images/shop/shop6.jpg',
   },
   // Add more products as needed
 ];
@@ -44,7 +59,7 @@ export const products: Product[] = [
 const Shop: React.FC = () => {
   return (
     <section id='shop' className="max-w-7xl mx-auto p-4">
-      <h1 className="text-4xl text-center pt-10 pb-10 font-bold mb-6">Shop</h1>
+     
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 ">
         {products.map((product: Product) => (
           <div
@@ -68,6 +83,14 @@ const Shop: React.FC = () => {
             </div>
           </div>
         ))}
+      </div>
+      <div className='flex justify-between pt-10 pb-10'>
+      <h1 className="text-4xl font-bold mb-6">New <br/><span>Arrivals</span></h1>
+      <div className='flex justify-between items-center underline'>
+      <p >More Products.</p>
+      <Image src={arrow} alt="right arrow" width={20} height={20}/>
+      </div>
+      
       </div>
     </section>
   );

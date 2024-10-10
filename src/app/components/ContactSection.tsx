@@ -7,8 +7,8 @@ export default function ContactSection(){
     return(
         <section id="contact" className="min-h-screen  relative">
             <h2 className="text-4xl font-bold text-center pb-20 pt-20"  >Contact Us</h2>
-            <div className="grid md:grid-cols-3 grid-cols-1 text-center gap-x-4">
-                <div className="bg-blue-50 p-x-4 pt-10 pb-10  px-10 ">
+            <div className="grid md:grid-cols-3 grid-cols-1 text-center gap-x-4 gap-y-10">
+                <div className="bg-blue-50 p-x-4 py-10  px-10 ">
                   <div className="flex justify-center items-center h-40">
                   <Image src={address} alt="address" height={100} width={100}/>
                   </div>
