@@ -15,28 +15,17 @@ interface Product {
   }
   
   const ProductArrival: React.FC<ProductSliderProps> = ({ products }) => {
-    const sliderRef = React.useRef<HTMLDivElement>(null);
-  
-    const scrollLeft = () => {
-      if (sliderRef.current) {
-        sliderRef.current.scrollBy({ left: -200, behavior: 'smooth' });
-      }
-    };
-  
-    const scrollRight = () => {
-      if (sliderRef.current) {
-        sliderRef.current.scrollBy({ left: 200, behavior: 'smooth' });
-      }
-    };
+ 
   
     return (
-      <div className="relative">
-         <button onClick={scrollLeft} className="absolute left-0 top-1/2 transform -translate-y-1/2 bg-black text-white px-4 py-2 rounded">Left</button>
-        <div className="overflow-x-auto whitespace-nowrap h-100 " ref={sliderRef}>
+      <div className="relative overflow-x-auto whitespace-nowrap scroll-smooth scrollbar-thin scrollbar-thumb-gray-500 scrollbar-track-gray-100">
           <div className="flex space-x-4">
             {products.map(product => (
-              <div key={product.id} className="inline-block px-4 bg-blue-50">
-                <Image src={product.image1} alt={product.name} className="w-80 h-80 object-cover" height={500} width={500} /><br/>
+              <div key={product.id} className="inline-block px-4 bg-blue-50  md:w-80">
+                <div className="flex justify-around md:w-80 w-full h-80 object-cover">
+                <Image src={product.image1} alt={product.name}  height={500} width={500} /><br/>
+
+                </div>
                 <h3 className="mt-2 text-left ">{product.name}</h3>
           <div className="flex gap-x-2">
           <h4 className="mt-2 text-left">{product.read}</h4>
@@ -48,8 +37,7 @@ interface Product {
             ))}
           </div>
         </div>
-        <button onClick={scrollRight} className="absolute right-0 top-1/2 transform -translate-y-1/2 bg-black text-white px-4 py-2 rounded">Right</button>
-      </div>
+      
     );
   };
   export default ProductArrival;
