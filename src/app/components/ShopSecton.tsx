@@ -30,7 +30,7 @@ export const products: Product[] = [
   // Add more products as needed
 ];
 
-const ProductCard: React.FC<Product & { isFeatured?: boolean }> = ({ name, price, description, imageUrl, isFeatured }) => {
+const ProductCard: React.FC<Product & { isFeatured?: boolean }> = ({ name,  imageUrl, isFeatured }) => {
   return (
     <div className={`border rounded-lg shadow-lg overflow-hidden grid gap-6 ${isFeatured ? 'md:col-span-1 md:row-span-2' : 'md:col-span-1 md:row-span-1'}`}>
       <div className="relative">
