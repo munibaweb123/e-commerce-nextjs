@@ -2,7 +2,7 @@ import map from "../../../public/images/map.jpg"
 import phone from "../../../public/images/contact/phone.png"
 import address from "../../../public/images/contact/address.png"
 import email from "../../../public/images/contact/email.png"
-import joinus2 from "../../../public/images/contact/join-us1.jpg"
+import joinus2 from "../../../public/images/contact/join-us1.png"
 import joinus1 from "../../../public/images/contact/join-us2.png"
 
 import Image from "next/image"
