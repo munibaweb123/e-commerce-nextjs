@@ -1,12 +1,10 @@
-
 import Image from 'next/image';
-import arrow from "../../../public/images/arrow.png"
+import { AiOutlineArrowRight } from 'react-icons/ai'; // Import the right arrow icon
 
 export interface Product {
   id: number;
   name: string;
-  price: number;
-  description: string;
+ 
   imageUrl: string;
 }
 
@@ -14,83 +12,67 @@ export const products: Product[] = [
   {
     id: 1,
     name: 'Living Room',
-    price: 29.99,
-    description: 'Sofa for Living Room.',
+  
     imageUrl: '/images/shop/shop1.jpg',
   },
   {
     id: 2,
-    name: 'Living Room',
-    price: 49.99,
-    description:'Table For Living Room.',
+    name: 'Dining Room',
+  
     imageUrl: '/images/shop/shop2.jpg',
   },
   {
     id: 3,
-    name: 'Living Room',
-    price: 19.99,
-    description: 'Plant Decoration for Living Room',
+    name: 'Drawing Room',
+   
     imageUrl: '/images/shop/shop3.jpg',
-  },
-  {
-    id: 4,
-    name: 'Living Room',
-    price: 199.99,
-    description: 'LCD TV for Living Room',
-    imageUrl: '/images/shop/shop4.jpg',
-  },
-  {
-    id: 5,
-    name: 'Home Garden',
-    price: 149.99,
-    description: 'Sofa set for Home Garden',
-    imageUrl: '/images/shop/shop5.jpg',
-  },
-  {
-    id: 6,
-    name: 'Dining Room',
-    price: 199.99,
-    description: 'Book shelf for Dining Room',
-    imageUrl: '/images/shop/shop6.jpg',
   },
   // Add more products as needed
 ];
 
+const ProductCard: React.FC<Product & { isFeatured?: boolean }> = ({ name, price, description, imageUrl, isFeatured }) => {
+  return (
+    <div className={`border rounded-lg shadow-lg overflow-hidden grid gap-6 ${isFeatured ? 'md:col-span-1 md:row-span-2' : 'md:col-span-1 md:row-span-1'}`}>
+      <div className="relative">
+        <div className="absolute top-0 left-0 text-4xl pt-10 pl-10 p-2 z-10">
+          <h3 className="font-semibold">{name}</h3>
+          <div className='flex justify-between items-center underline text-2xl'>
+          <p>Shop Now.</p>
+          <AiOutlineArrowRight size={20} className="font-bold" /> {/* Use the right arrow icon */}
+        </div>
+        </div>
+        <Image 
+          src={imageUrl} 
+          alt={name} 
+          width={500} 
+          height={500} 
+          className={`w-full h-full ${isFeatured ? 'row-span-2' : ''}`} 
+        />
+      </div>
+     
+    </div>
+  );
+};
+
 const Shop: React.FC = () => {
   return (
-    <section id='shop' className="max-w-7xl mx-auto p-4">
-     
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 ">
-        {products.map((product: Product) => (
-          <div
-            key={product.id}
-            className="border rounded-lg shadow-lg overflow-hidden"
-          >
-            <Image 
-              src={product.imageUrl} 
-              alt={product.name} 
-              width={500} 
-              height={500} 
-              className="object-cover" // Optional for better image scaling
-            />
-            <div className="p-4 bg-blue-50">
-              <h2 className="text-xl font-semibold">{product.name}</h2>
-              <p className="text-gray-700">{product.description}</p>
-              <p className="text-lg font-bold">${product.price.toFixed(2)}</p>
-              <button className="mt-4 bg-black text-white px-4 py-2 rounded-md">
-                Add to Cart
-              </button>
-            </div>
-          </div>
+    <section id="shop" className="max-w-7xl mx-auto p-4">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        {products.map((product, index) => (
+          <ProductCard 
+            key={product.id} 
+            {...product} 
+            isFeatured={index === 0} // Set the first product as featured
+          />
         ))}
       </div>
+
       <div className='flex justify-between pt-10 pb-10'>
-      <h1 className="text-4xl font-bold mb-6">New <br/><span>Arrivals</span></h1>
-      <div className='flex justify-between items-center underline'>
-      <p >More Products.</p>
-      <Image src={arrow} alt="right arrow" width={20} height={20}/>
-      </div>
-      
+        <h1 className="text-4xl font-bold mb-6">New <br/><span>Arrivals</span></h1>
+        <div className='flex justify-between items-center underline'>
+          <p>More Products.</p>
+          <AiOutlineArrowRight size={20} className="ml-2" /> {/* Use the right arrow icon */}
+        </div>
       </div>
     </section>
   );

@@ -4,6 +4,8 @@ import { FaFacebook, FaInstagram, FaLinkedin, FaGithub } from 'react-icons/fa';
 export default function Footer() {
     return (
         <footer className="flex flex-col sm:flex-row px-4 sm:px-20 bg-gray-900 text-white h-auto sm:h-72 flex-wrap">
+          
+            
             <div className="flex flex-col sm:flex-row justify-between py-14 w-full">
                 <div className="flex gap-x-4">
                     <h2 className="text-xl sm:text-2xl font-bold text-center">Home Decor.</h2>

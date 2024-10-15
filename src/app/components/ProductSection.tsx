@@ -17,9 +17,7 @@ const products = [
     { id: 1, name: '7 ways to decor your home.', read:'Read More.', image1: '/images/Arrivals/arrival1.jpg', image2:'/images/arrow.png' },
     { id: 2, name: 'Kitchen organization',read:'Read More.', image1: '/images/Arrivals/arrival2.jpg' , image2:'/images/arrow.png'},
     { id: 3, name: 'Bed Decoration ',read:'Read More.', image1: '/images/Arrivals/arrival3.jpg' , image2:'/images/arrow.png' },
-    { id: 1, name: 'Cupboard',read:'Read More.', image1: '/images/Arrivals/arrival4.jpg', image2:'/images/arrow.png' },
-    { id: 2, name: 'Decor your bedroom',read:'Read More.', image1: '/images/Arrivals/arrival5.jpg', image2:'/images/arrow.png' },
-    { id: 3, name: 'Home Garden Decor.',read:'Read More.', image1: '/images/Arrivals/arrival6.jpg' , image2:'/images/arrow.png'},
+
     // Add more products as needed
   ];
 
@@ -29,7 +27,7 @@ export default function ProductSection(){
         <section id="product" className="min-h-screen ">
               
               <div className="flex justify-normal py-10"><ProductSlider products={products} /></div>
-              <div className="grid grid-cols-1 md:grid-cols-2">
+              <div className="grid grid-cols-1 md:grid-cols-2 ">
                 <div className="w-100 h-100 relative overflow-hidden">
                     <Image src="/images/products/product7.jpg" alt="sofa bed" width={500} height={500} className="w-full h-full object-cover px-10" />
                 </div>

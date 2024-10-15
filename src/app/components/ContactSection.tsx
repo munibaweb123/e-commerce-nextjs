@@ -2,7 +2,11 @@ import map from "../../../public/images/map.jpg"
 import phone from "../../../public/images/contact/phone.png"
 import address from "../../../public/images/contact/address.png"
 import email from "../../../public/images/contact/email.png"
+import joinus2 from "../../../public/images/contact/join-us1.jpg"
+import joinus1 from "../../../public/images/contact/join-us2.png"
+
 import Image from "next/image"
+import Link from "next/link"
 export default function ContactSection(){
     return(
         <section id="contact" className="min-h-screen  relative">
@@ -65,6 +69,48 @@ export default function ContactSection(){
                 <Image src={map} alt="map location pic" height={500} width={500}/>
             </div>
             </div>
+
+            <div className="bg-blue-50 h-100">
+    <div className="border-b-2 border-white w-full my-4 grid grid-cols-1 md:grid-cols-3"></div>
+    <div className="bg-blue-50 h-100">
+    <div className="border-b-2 border-white w-full my-4 grid grid-cols-1 md:grid-cols-3"></div>
+
+    <div className="flex flex-col md:flex-row items-center justify-between p-4">
+        <div className="flex-1 flex justify-center md:justify-start mb-4 md:mb-0">
+            <Image src={joinus1} alt="home decoration item" width={400} height={400} />
+        </div>
+
+        <div className="flex-1 text-center">
+            <h3 className="text-3xl md:text-4xl mb-2">Join Our Newsletter</h3>
+            <h4 className="text-lg md:text-xl mb-4">Sign up for deals, new products, and promotions</h4>
+            <div className="flex flex-col md:flex-row items-center border-b-2 border-black justify-center my-10">
+                <label className="mr-4" htmlFor="email">Email address</label>
+                <input
+                    type="email"
+                    id="email"
+                    className="border-b-2 border-black outline-none px-2 py-1 mb-2 md:mb-0"
+                    required
+                />
+                <Link href="signup" className="px-4 py-2 ">
+                    Signup
+                </Link>
+            </div>
+        </div>
+
+        <div className="flex-1 flex justify-center md:justify-end mb-4 md:mb-0">
+            <Image src={joinus2} alt="home decoration item" width={400} height={400} />
+        </div>
+    </div>
+</div>
+
+</div>
+
+
+
+
+          
+        
+            
 
         </section>
     )
