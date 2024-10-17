@@ -6,7 +6,7 @@ import { FaShippingFast } from 'react-icons/fa'; // Importing a shipping icon
 import { FaMoneyBillWave } from 'react-icons/fa'; // Money bill icon
 import { FaLock } from 'react-icons/fa';
 import { FaPhone } from 'react-icons/fa';
-import { transform } from "next/dist/build/swc";
+
 
 
 
@@ -49,7 +49,7 @@ export default function ProductSection(){
                 <div className="flex justify-center items-center"><FaLock size={50}/></div><h2 className="font-bold text-md">Secure Payments</h2>
                 <p>Secured by Stripe</p></div>
                 <div className="bg-blue-50 py-4">
-                <div className="flex justify-center items-center "><FaPhone size={50} style={{transform:'scaleX(-1)'}}/></div>
+                <div className="flex justify-center items-center "><FaPhone size={50} className="transform scale-x-[-1]"/></div>
                    <h2 className="font-bold text-md">24/7 Support</h2>
                 <p>Phone and Email support</p></div>
         
