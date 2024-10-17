@@ -36,7 +36,7 @@ export default function ProductSection(){
               
               <div className="flex justify-normal py-10"><ProductSlider products={products} /></div>
 
-              <div className="h-100 grid grid-cols-1 md:grid-cols-4 bg-gray-50 gap-x-4 text-center gap-y-4 ">
+              <div className="h-100 grid grid-cols-1 md:grid-cols-4 bg-gray-50 gap-x-4 text-center gap-y-4 py-10">
                 <div className="bg-blue-50 py-4">
                   <div className="flex justify-center items-center "><FaShippingFast size={50}/></div>
                   <h2 className="font-bold text-md">Free Shipping</h2>
