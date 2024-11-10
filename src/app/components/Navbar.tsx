@@ -60,9 +60,9 @@ const Navbar: React.FC = () => {
             <div className="hidden sm:block sm:ml-6">
               <div className="flex space-x-4 text-2xl">
                 <Link href="/" className="text-gray-700 hover:text-gray-900 hover:font-bold px-3 py-2 rounded-md text-sm font-medium">Home</Link>
-                <Link href="#shop" className="text-gray-700  hover:text-gray-900 hover:font-bold px-3 py-2 rounded-md text-sm font-medium">Shop</Link>
-                <Link href="#product" className="text-gray-700  hover:text-gray-900 hover:font-bold px-3 py-2 rounded-md text-sm font-medium">Product</Link>
-                <Link href="#contact" className="text-gray-700  hover:text-gray-900 hover:font-bold px-3 py-2 rounded-md text-sm font-medium">Contact</Link>
+                <Link href="/shop" className="text-gray-700  hover:text-gray-900 hover:font-bold px-3 py-2 rounded-md text-sm font-medium">Shop</Link>
+                <Link href="/product" className="text-gray-700  hover:text-gray-900 hover:font-bold px-3 py-2 rounded-md text-sm font-medium">Product</Link>
+                <Link href="/contact" className="text-gray-700  hover:text-gray-900 hover:font-bold px-3 py-2 rounded-md text-sm font-medium">Contact</Link>
               </div>
             </div>
           </div>
@@ -72,9 +72,9 @@ const Navbar: React.FC = () => {
       <div className={`${isOpen ? 'block' : 'hidden'} sm:hidden`} id="mobile-menu">
         <div className="px-2 pt-2 pb-3 space-y-1 ">
           <Link href="/" className="text-gray-700 hover:text-gray-900 hover:font-bold block px-3 py-2 rounded-md text-base font-medium">Home</Link>
-          <Link href="#shop" className="text-gray-700  hover:text-gray-900 hover:font-bold block px-3 py-2 rounded-md text-base font-medium">Shop</Link>
-          <Link href="#product" className="text-gray-700  hover:text-gray-900 hover:font-bold block px-3 py-2 rounded-md text-base font-medium">Product</Link>
-          <Link href="#contact" className="text-gray-700  hover:text-gray-900 hover:font-bold block px-3 py-2 rounded-md text-base font-medium">Contact</Link>
+          <Link href="/shop" className="text-gray-700  hover:text-gray-900 hover:font-bold block px-3 py-2 rounded-md text-base font-medium">Shop</Link>
+          <Link href="/product" className="text-gray-700  hover:text-gray-900 hover:font-bold block px-3 py-2 rounded-md text-base font-medium">Product</Link>
+          <Link href="/contact" className="text-gray-700  hover:text-gray-900 hover:font-bold block px-3 py-2 rounded-md text-base font-medium">Contact</Link>
         </div>
       </div>
     </nav>

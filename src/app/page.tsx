@@ -1,5 +1,5 @@
 
-import ContactSection from "./components/ContactSection";
+
 import Footer from "./components/Footer";
 
 import HeroSection from "./components/HeroSection";
@@ -15,8 +15,8 @@ export default function Home() {
     <HeroSection/>
     <ShopSection/>
     <ProductSection/>
-    <ContactSection/>
-    <Footer/>
+    
+    
    </div>
   );
 }
