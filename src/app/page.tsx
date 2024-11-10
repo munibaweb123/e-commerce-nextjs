@@ -1,6 +1,5 @@
 
 
-import Footer from "./components/Footer";
 
 import HeroSection from "./components/HeroSection";
 import ProductSection from "./components/ProductSection";
