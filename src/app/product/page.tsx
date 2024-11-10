@@ -1,6 +1,7 @@
 import Image from "next/image"
 import { FaHeart } from "react-icons/fa"
 import Header from "../components/Header"
+import { FiArrowLeft,FiArrowRight } from 'react-icons/fi';
 
 export default function Product() {
   return (
@@ -9,18 +10,32 @@ export default function Product() {
       <h2>Home {'>'} Shop {'>'} Living Room {'>'} <span className="font-bold">Product</span></h2>
       <div className="grid md:grid-cols-2 gap-8">
         <div className="block">
+        <div className="flex items-center justify-center"></div>
           {/* Main image */}
-          <div className="w-full h-96 relative bg-blue-50">
-            <Image 
-              src="/images/products/tray-table.jpg" 
-              alt="tray table" 
-              layout="fill" // Ensures the image fills the container
-              objectFit="contain" // Makes the image fit inside without cropping
-            />
-          </div>
+          <div className="w-full md:h-96 h-screen relative bg-blue-50">
+      {/* Left Arrow */}
+      <FiArrowLeft
+        className="absolute top-1/2 left-0 transform -translate-y-1/2"
+        size={40}
+      />
+
+      {/* Image */}
+      <Image
+        src="/images/products/tray-table.jpg"
+        alt="tray table"
+        layout="fill" // Ensures the image fills the container
+        objectFit="contain" // Makes the image fit inside without cropping
+      />
+
+      {/* Right Arrow */}
+      <FiArrowRight
+        className="absolute top-1/2 right-0 transform -translate-y-1/2 "
+        size={40}
+      />
+    </div>
 
           {/* Thumbnail images */}
-          <div className="md:flex justify-evenly mt-4 w-full hidden">
+          <div className="md:flex md:gap-2 justify-evenly mt-4 w-full hidden">
             <div className="w-52 h-52 relative">
               <Image 
                 src="/images/products/tray-table0.jpg" 
@@ -75,7 +90,7 @@ export default function Product() {
           <p className="text-2xl">17 1/2x20 5/8 {"\""}</p>
           <p className="text-lg text-gray-500">Choose Color {'>'}</p>
           <p className="text-2xl">Black</p>
-          <div className="flex ">
+          <div className="md:flex grid grid-cols-2">
             <div className="w-32 h-32 relative">
               <Image 
                 src="/images/products/tray-table.jpg" 
