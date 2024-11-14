@@ -21,7 +21,7 @@ export default function Shop() {
                 </div>
             </div>
             <div className="grid md:grid-cols-4">
-                <div className="hidden md:col-span-1"><h2 className="flex text-2xl"><MdFilterList/> Filter</h2>
+                <div className="hidden md:grid-cols-1 md:grid"><h2 className="flex text-2xl"><MdFilterList/> Filter</h2>
                 <h3 className="font-bold text-lg">CATEGORIES</h3>
                 <ul >
                     <li>All Rooms</li>
@@ -48,7 +48,7 @@ export default function Shop() {
                     <h3 className="flex gap-2 text-lg">Sort by <FiChevronDown/> <FaTh/> </h3>
                     </div>
                     {/* images container */}
-                   <div className="grid md:grid-cols-3">
+                   <div className="grid md:grid-cols-2 lg:grid-cols-3 space-x-2">
                     {/* first image div */}
                    <div className="flex flex-col items-center md:w-80 w-full">
               <div className="relative w-full">
@@ -138,6 +138,96 @@ export default function Shop() {
               </div>
               <h3 className="mt-2 text-2xl text-left font-bold w-full">Loveseat Sofa</h3>
               <h4 className="mt-2 text-left font-bold w-full">$199.00 <span className="line-through">$400.00</span></h4>
+            </div>
+            {/* fourth div */}
+            <div className="flex flex-col items-center md:w-80 w-full">
+              <div className="relative w-full">
+                <Image
+                  src={"/images/products/product4.jpg"}
+                  alt={"product pic"}
+                  height={500}
+                  width={500}
+                  className="object-cover h-80 w-80"
+                />
+                <div className="absolute top-2 right-2 p-1 bg-white rounded-full shadow-md">
+                  <AiOutlineHeart size={24} className="text-gray-500 hover:text-red-500 cursor-pointer" />
+                </div>
+                <div className="absolute top-0 left-0 flex flex-col items-start p-2 z-10">
+                  <h3 className="font-semibold bg-white pt-1 pl-2 pr-2 my-2">New</h3>
+                  <h3 className="font-semibold bg-green-400 pt-1 pl-2 pr-2">-50%</h3>
+                </div>
+              </div>
+              <div className="mt-2 flex justify-start">
+                <Image
+                  src={"/images/stars.png"}
+                  alt="product pic"
+                  className="w-full h-auto object-cover"
+                  height={100}
+                  width={100}
+                />
+              </div>
+              <h3 className="mt-2 text-2xl text-left font-bold w-full">white flower pot</h3>
+              <h4 className="mt-2 text-left font-bold w-full">$25.00 <span className="line-through">$40.00</span></h4>
+            </div>
+            {/* fifth image */}
+            <div className="flex flex-col items-center md:w-80 w-full">
+              <div className="relative w-full">
+                <Image
+                  src={"/images/products/product5.jpg"}
+                  alt={"product pic"}
+                  height={500}
+                  width={500}
+                  className="object-cover h-80 w-80"
+                />
+                <div className="absolute top-2 right-2 p-1 bg-white rounded-full shadow-md">
+                  <AiOutlineHeart size={24} className="text-gray-500 hover:text-red-500 cursor-pointer" />
+                </div>
+                <div className="absolute top-0 left-0 flex flex-col items-start p-2 z-10">
+                  <h3 className="font-semibold bg-white pt-1 pl-2 pr-2 my-2">New</h3>
+                  <h3 className="font-semibold bg-green-400 pt-1 pl-2 pr-2">-50%</h3>
+                </div>
+              </div>
+              <div className="mt-2 flex justify-start">
+                <Image
+                  src={"/images/stars.png"}
+                  alt="product pic"
+                  className="w-full h-auto object-cover"
+                  height={100}
+                  width={100}
+                />
+              </div>
+              <h3 className="mt-2 text-2xl text-left font-bold w-full">Table Lamp</h3>
+              <h4 className="mt-2 text-left font-bold w-full">$59.00 <span className="line-through">$75.00</span></h4>
+            </div>
+            {/* sixth image */}
+            <div className="flex flex-col items-center md:w-80 w-full">
+              <div className="relative w-full">
+                <Image
+                  src={"/images/products/product6.jpg"}
+                  alt={"product pic"}
+                  height={500}
+                  width={500}
+                  className="object-cover h-80 w-80"
+                />
+                <div className="absolute top-2 right-2 p-1 bg-white rounded-full shadow-md">
+                  <AiOutlineHeart size={24} className="text-gray-500 hover:text-red-500 cursor-pointer" />
+                </div>
+                <div className="absolute top-0 left-0 flex flex-col items-start p-2 z-10">
+                  <h3 className="font-semibold bg-white pt-1 pl-2 pr-2 my-2">New</h3>
+                  <h3 className="font-semibold bg-green-400 pt-1 pl-2 pr-2">-50%</h3>
+                </div>
+              </div>
+              <div className="mt-2 flex justify-start">
+                <Image
+                  src={"/images/stars.png"}
+                  alt="product pic"
+                  className="w-full h-auto object-cover"
+                  height={100}
+                  width={100}
+                />
+              </div>
+              <h3 className="mt-2 text-2xl text-left font-bold w-full">Roundseat Sofa</h3>
+              <h4 className="mt-2 text-left font-bold w-full">$149.00 <span className="line-through">$300.00</span></h4>
             </div>
                    </div>
                     </div>
